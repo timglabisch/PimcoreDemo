@@ -1,0 +1,77 @@
+/**
+ * Standard Content Typ
+ * WYSIWYG
+ * -- only Text
+ */
+
+.pimcore_area_elements_wysiwyg {
+    display: block;
+    width: 100%;
+}
+
+.pimcore_area_elements_wysiwyg_images_right {
+    display: block;
+    width: 100%;
+}
+
+/**
+* Editmode
+*/
+.pimcore_area_elements_wysiwyg_images_right .editmode {
+    width: 250px;
+}
+
+.pimcore_area_elements_wysiwyg_images_right .imageblock {
+    float: right;
+    width: 250px;
+    margin: 0 0 0 20px;
+}
+
+.pimcore_area_elements_wysiwyg_images_right .image {
+    width: 250px;
+    position: relative;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+}
+
+.pimcore_area_elements_wysiwyg_images_right .image a {
+    display: block;
+}
+
+.pimcore_area_elements_wysiwyg_images_right .image .zoom {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #f00;
+}
+
+.pimcore_area_elements_gallery_block {
+    display: block;
+    width: 100%;
+}
+
+.pimcore_area_elements_gallery_block .pimcore_block_entry,
+.pimcore_area_elements_gallery_block .image {
+    width: 30%;
+    margin: 0 3% 10px 0;
+    float: left;
+    clear: none;
+}
+
+.pimcore_area_elements_gallery_block .picture {
+    width: 100%;
+}
+
+.pimcore_area_elements_gallery_block a {
+    position: relative;
+    display: block;
+}
+
+.pimcore_area_elements_gallery_block .zoom {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f09134;
+    bottom: 10px;
+    right: 10px;
+}

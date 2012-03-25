@@ -1,0 +1,9 @@
+.idea
+website/views/aras/*
+website/**/backup/*
+website/**/var/backup/*.sql
+website/**/var/cache/zend*
+website/**/var/log/*.log
+website/**/var/resyclebin/*
+website/**/var/system/*
+website/**/var/tmp/*
