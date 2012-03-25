@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  <items>
+    <item>
+      <method>cover</method>
+      <arguments>
+        <width>1680</width>
+        <height>400</height>
+        <positioning>topcenter</positioning>
+      </arguments>
+    </item>
+  </items>
+  <name>portalSliderLarge</name>
+  <description></description>
+  <format>SOURCE</format>
+  <quality>70</quality>
+</zend-config>

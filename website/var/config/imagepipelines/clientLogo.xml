@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  <items>
+    <item>
+      <method>scaleByWidth</method>
+      <arguments>
+        <width>178</width>
+      </arguments>
+    </item>
+    <item>
+      <method>cover</method>
+      <arguments>
+        <width>178</width>
+        <height>120</height>
+        <positioning>center</positioning>
+      </arguments>
+    </item>
+  </items>
+  <name>clientLogo</name>
+  <description></description>
+  <format>SOURCE</format>
+  <quality>100</quality>
+</zend-config>
