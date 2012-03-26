@@ -121,7 +121,7 @@ if (count($this->startNode->getChilds()) > 0) {
 
                     if ($this->onlyactive) {
                         if ($active) {
-                            echo $this->action("menu", "navigation", null,
+                             $this->action("menu", "navigation", null,
                                 array(
                                     "startNode" => $NaviDocument,
                                     "document" => $this->document,
@@ -131,7 +131,7 @@ if (count($this->startNode->getChilds()) > 0) {
                     }
                     else {
 
-                        echo $this->action("menu", "navigation", null,
+                         echo $this->action("menu", "navigation", null,
                             array(
                                 "startNode" => $NaviDocument,
                                 "document" => $this->document,

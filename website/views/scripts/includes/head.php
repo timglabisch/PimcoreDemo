@@ -113,10 +113,11 @@ if (!$this->portal) {
             array(
                 'href' => '/static/css/editmode.css',
                 'rel' => 'stylesheet',
-                'media' => 'screen',
+                'media' => 'all',
                 'type' => 'text/css'
             )
         );
+
     }
 
     $this->headLink()->appendStylesheet('/static/css/ie.css', 'screen', 'lt IE 9');

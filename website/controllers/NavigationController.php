@@ -29,7 +29,7 @@ class NavigationController extends Website_Controller_Action
             switch (Zend_Registry::get("Zend_Locale")->getLanguage()) {
                 case "de":
                     $startNode = Document::getByPath("/de");
-                                        break;
+                    break;
                 default:
                     $startNode = Document::getByPath("/");
                     break;
@@ -40,6 +40,9 @@ class NavigationController extends Website_Controller_Action
         }
         $this->view->onlyactive = $this->_getParam("onlyactive", false);
         $this->view->startNode = $startNode;
-        $this->forceRender();
+        $this->disableViewAutoRender();
+        $this->renderScript("navigation/menu.php");
+
+
     }
 }

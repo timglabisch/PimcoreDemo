@@ -8,16 +8,14 @@
  * User: Nflamann
  */
 
-//$this->layout()->setLayout("layout");
+$this->layout()->setLayout("default");
 ?>
 
 <!-- CONTENT FIRST ;) -->
 
-<div class="breadcrumbs">
-    <a href="/">home</a>
-</div>
 
-<h1>cooming Soon</h1>
+
+<h1>Comming Soon</h1>
 
 <div class="leftcol">
 
@@ -26,10 +24,10 @@
         <h2>this is a "comming Soon" Page"</h2>
 
         <p>
-            we plan to add some exasmples in this side, pleace wait a while, we will come back in some time ;-)
+            we plan to add much examples in this side, pleace wait a while, we'll come back in some time ;-)
         </p>
 
-        <h2>take a look</h2>
+        <h2>or take a look</h2>
         <ul>
             <li>
                 <a href="http://www.pimcore.org/board/viewforum.php?f=28" target="_blank">Pimcore Demo Forum</a>
@@ -40,9 +38,17 @@
         </ul>
         <h2>Roadmap</h2>
         <ul>
-            <li>End March: Simple Examples, ObjectList, ObjectDetail</li>
-
+            <li>March 2012: Simple Examples: Standard Input Types, ObjectList, ObjectDetail</li>
+            <li>April 2012: Beginner Examples: Areas, Renderlets, Properties ...</li>
+            <li>May 2012: Simple Objects, Field Collections, Briks, ...</li>
         </ul>
+
+        <h2>In your interest:</h2>
+
+        <p>
+            The Pimcore demo project is a recreational project. We do this in terms of open source. For comments and
+            suggestions please look in the forum
+        </p>
 
     </div>
 

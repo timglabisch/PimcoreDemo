@@ -1,73 +1,77 @@
+/** Manipulate the Editmode
+----------------------------- */
 
-h1 div input {
+h1 div.pimcore_tag_input input.x-form-text {
+    padding: 0;
+    font-family: "Museo100" !important;
+    height: 50px;
+    font-size: 48px !important;
+    margin: 0 0 .5em 0 !important;
+    line-height: 43px !important;
+    clear: both !important;
+    color: #F30 !important;
+}
+
+h2 div input {
+    color: #29323B !important;
+    font-family: "Museo500" !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    padding: 4px 4px !important;
+}
+
+#content .limiter #pimcore_editable_headline input {
     padding: 0;
     font-family: "Museo100" !important;
     font-size: 48px !important;
     margin: 0 0 .5em 0 !important;
     line-height: 43px !important;
     clear: both !important;
-	color: #F30 !important;
-  }
-
-h2 div input {
-	color: #29323B !important;
-	font-family: "Museo500" !important;
-	font-size: 20px !important;
-	line-height: 24px !important;
-	padding: 4px 4px !important;
-}
-
-#content .limiter #pimcore_editable_headline input {
-	padding: 0;
-	font-family: "Museo100" !important;
-	font-size: 48px !important;
-	margin: 0 0 .5em 0 !important;
-	line-height: 43px !important;
-	clear: both !important;
-	color: #F30 !important;
-	height: 70px !important;
+    color: #F30 !important;
+    height: 70px !important;
 }
 
 p {
-	color: #282828 !important;
+    color: #282828 !important;
 }
 
 #content .limiter .portalh1 #pimcore_editable_headline  input {
-	color: #C5C7C9 !important;
+    color: #C5C7C9 !important;
 }
 
 body.content #content {
-	top: 30px;
+    top: 30px;
 }
 
 h1.margintop {
-	margin:  0;
+    margin: 0;
 }
 
 body.portal #infoarea {
-	height: 75px;
+    height: 75px;
 }
+
 body.portal #slogan {
-	height: 50px;
+    height: 50px;
 }
 
 body.portal #content {
-	top: 190px;
+    top: 190px;
 }
 
 .speciallink {
-	background: #E0E1E2 url(/static/img/sprite.png) no-repeat 23px -629px;
-	padding: 17px 10px 17px 49px;
-	margin: 5px 0 20px 0;
-	display: block;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-	font-size: 20px;
-	color: #2C353E;
-	font-family: "Museo500";
-	line-height: 20px;
+    background: #E0E1E2 url(/static/img/sprite.png) no-repeat 23px -629px;
+    padding: 17px 10px 17px 49px;
+    margin: 5px 0 20px 0;
+    display: block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    color: #2C353E;
+    font-family: "Museo500";
+    line-height: 20px;
 }
