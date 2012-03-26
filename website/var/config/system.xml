@@ -5,7 +5,7 @@
     <php_cli></php_cli>
     <domain></domain>
     <language>de</language>
-    <validLanguages>en,de_AT</validLanguages>
+    <validLanguages>en_GB,de_AT</validLanguages>
     <theme>/pimcore/static/js/lib/ext/resources/css/xtheme-gray.css</theme>
     <loginscreenimageservice>1</loginscreenimageservice>
     <loginscreencustomimage></loginscreencustomimage>

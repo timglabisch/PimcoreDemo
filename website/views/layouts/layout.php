@@ -28,6 +28,12 @@ if ($this->portal) {
     <div class="limiter">
         <?php
         echo $this->layout()->content;
+
+        if (!$this->portal) {
+            $this->template("includes/rightcol.php");
+        }
+
+
         ?>
     </div>
     <?php

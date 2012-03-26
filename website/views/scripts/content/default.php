@@ -72,32 +72,9 @@ $this->layout()->setLayout("layout");
 
 </div>
 
-<div class="rightcol">
 
-    <div class="rc_box">
-        <h3>interesse?</h3>
 
-        <div class="line">
-            Dann schicke uns deine aussagekr&auml;ftige Bewerbungsunterlagen mit
-            Lebenslauf, Gehaltsvorstellungen und n&auml;chstm&ouml;glichem Eintrittstermin.
-            Wir freuen uns auf dich!
-            <strong>
-                elements.at<br/>
-                digital communications gmbh
-            </strong>
-            <address>
-                Herr Dietmar Rietsch<br/>
-                Schallmooser Haupststra&szlig;e 10<br/>
-                5020 Salzburg, &Ouml;sterreich<br/>
-                Telefon +43 (0) 662 / 87 66 06
-            </address>
-        </div>
-        <div class="links margin">
-            <a href="#">work@elements.at</a>
-        </div>
-    </div>
 
-</div>
 
 
 
