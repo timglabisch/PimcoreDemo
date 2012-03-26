@@ -43,8 +43,7 @@ pimcore.document.tags.wysiwyg = Class.create(pimcore.document.tag, {
         if (options.resize_disabled) {
             options.resize_enabled = false;
         }
-        
-                
+
         this.options = options;
 
         var textareaId = id + "_textarea";
@@ -60,11 +59,26 @@ pimcore.document.tags.wysiwyg = Class.create(pimcore.document.tag, {
         if (options.height) {
             textareaHeight = options.height;
         }
-        
+
+        var inactiveContainerWidth = options.width + "px";
+        if (typeof options.width == "string" && options.width.indexOf("%") >= 0) {
+            inactiveContainerWidth = options.width;
+        }
+
         Ext.get(this.textarea).addClass("pimcore_wysiwyg_inactive");
-        Ext.get(this.textarea).applyStyles("width: " + options.width + "px; min-height: " + textareaHeight + "px;");
+        Ext.get(this.textarea).applyStyles("width: " + inactiveContainerWidth  + "; min-height: " + textareaHeight + "px;");
         Ext.get(this.textarea).on("click", this.startCKeditor.bind(this));
-        
+
+        // if the width is a % value get the current width of the container in px for further processing
+        if (typeof options.width == "string" && options.width.indexOf("%") >= 0) {
+            this.options.width = Ext.get(this.textarea).getWidth();
+            if (this.options.width < 1) {
+                this.options.width = 400;
+            }
+            // apply the width again in px
+            Ext.get(this.textarea).applyStyles("width: " + this.options.width + "px");
+        }
+
         Ext.get(id).setStyle({
             width: options.width + "px"
         });
