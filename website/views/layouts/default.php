@@ -32,20 +32,31 @@ if ($this->portal) {
         </div>
 
         <?php
-        echo $this->layout()->content;
 
-        if (!$this->portal) {
+        if ($this->portal) {
+            echo $this->layout()->content;
+        }
+        else {
+            if (count($this->placeholder("headline")->getValue()) > 0) {
+                echo "<h1>".$this->placeholder("headline")."</h1>";
+            }
+            else {
+                echo "<h1>".$this->input("Headline")."</h1>";
+            }
+            ?>
+            <div class="leftcol">
+                <?php
+                echo $this->layout()->content;
+
+                ?>
+            </div>
+            <?php
             $this->template("includes/rightcol.php");
         }
-
-
         ?>
     </div>
     <?php
-
-
     $this->template("includes/footer.php");
-
     ?>
 </div>
 <?php

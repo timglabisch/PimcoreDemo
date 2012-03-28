@@ -6,8 +6,8 @@
             <div class="slogan_limiter">
                 <div class="item_slogan">
                     <a href="#" class="slogan">
-                        Pappas ist einfach geil!
-                        <span>Weiterlesen</span>
+                        Text
+                        <span>more</span>
                     </a>
                 </div>
             </div>
@@ -18,8 +18,8 @@
             <div class="slogan_limiter">
                 <div class="item_slogan">
                     <a href="#" class="slogan">
-                        Pappas ist einfach geil blau!
-                        <span>Weiterlesen</span>
+                        Text
+                        <span>more</span>
                     </a>
                 </div>
             </div>
@@ -30,8 +30,8 @@
             <div class="slogan_limiter">
                 <div class="item_slogan">
                     <a href="#" class="slogan">
-                        Pappas ist einfach geil gr&uuml;n!
-                        <span>Weiterlesen</span>
+                        Text
+                        <span>more</span>
                     </a>
                 </div>
             </div>
@@ -43,7 +43,7 @@
     <div class="limiter">
         <div class="slidercontrols">
             <div class="description">
-                Showcase <span>/</span> Pappas Gruppe <span>/</span> Relaunch 2012
+                Text <span>/</span> Text <span>/</span> Text
             </div>
             <div id="sc_leftarrow"></div>
             <div id="sc_rightarrow"></div>
@@ -53,14 +53,13 @@
 
     <div id="infoarea">
         <div class="limiter">
-            <div id="slogan">Kreativagentur f&uuml;r digitale Kommunikation</div>
+            <div id="slogan">Pimcore Demo</div>
             <div id="ia_teaser" onclick="gotoLink(this);">
                 <div class="title">
-                    Neuer Trikotdesigner f&uuml;r Protouch
+                    Welcome to the Demo
                 </div>
                 <div class="text">
-                    F&uuml;r die INTERSPORT Eigenmarke PROTOUCH wurde ein auf Flash basierender
-                    Trikotdesigner entwickelt ...
+                    Some Text ...
                 </div>
                 <div class="date">27.10.2011</div>
                 <a href="#" class="isnone"></a>
