@@ -35,6 +35,7 @@ if (!$this->portal) {
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name=”robots” content=”noodp”>
+	<link href='http://fonts.googleapis.com/css?family=Spicy+Rice' rel='stylesheet' type='text/css'>
 
     <?php
 
@@ -87,9 +88,9 @@ if (!$this->portal) {
     $this->headlink()->appendStylesheet(
         array(
             'href' => '/static/css/styles.less',
-            'rel' => 'stylesheet/less',
+            'rel' => 'stylesheet/css',
             'media' => 'screen',
-            'type' => 'text/css'
+            'type' => 'text/less'
         )
     );
 

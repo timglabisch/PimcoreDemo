@@ -8,8 +8,6 @@
 @width-main: 1400px;
 @width-site: 955px;
 
-//@width-margin-left: ((@width-main - @width-site) / 2) * -1;
-
 /// colors
 
 @color-grey: #afb4b4;
@@ -27,46 +25,10 @@
 @sprite-content: url(/static/img/sprite_content.png) no-repeat;
 @sprite-maps: url(/static/img/sprite_accordion_map.png) no-repeat;
 
-// WEBFONTS
-
-@font-face {
-    font-family: 'Museo100';
-    src: url('/static/fonts/museo_100_macroman/Museo100-Regular-webfont.eot');
-    src: url('/static/fonts/museo_100_macroman/Museo100-Regular-webfont.eot?iefix') format('eot'),
-         url('/static/fonts/museo_100_macroman/Museo100-Regular-webfont.woff') format('woff'),
-         url('/static/fonts/museo_100_macroman/Museo100-Regular-webfont.ttf') format('truetype'),
-         url('/static/fonts/museo_100_macroman/Museo100-Regular-webfont.svg#webfont098Tokrg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Museo500';
-    src: url('/static/fonts/museo_500_macroman/Museo500-Regular-webfont.eot');
-    src: url('/static/fonts/museo_500_macroman/Museo500-Regular-webfont.eot?iefix') format('eot'),
-         url('/static/fonts/museo_500_macroman/Museo500-Regular-webfont.woff') format('woff'),
-         url('/static/fonts/museo_500_macroman/Museo500-Regular-webfont.ttf') format('truetype'),
-         url('/static/fonts/museo_500_macroman/Museo500-Regular-webfont.svg#webfont098Tokrg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Museo300';
-    src: url('/static/fonts/museo_300_macroman/Museo300-Regular-webfont.eot');
-    src: url('/static/fonts/museo_300_macroman/Museo300-Regular-webfont.eot?iefix') format('eot'),
-         url('/static/fonts/museo_300_macroman/Museo300-Regular-webfont.woff') format('woff'),
-         url('/static/fonts/museo_300_macroman/Museo300-Regular-webfont.ttf') format('truetype'),
-         url('/static/fonts/museo_300_macroman/Museo300-Regular-webfont.svg#webfont098Tokrg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 // FONT DEFINITIONS
 
-@font-special: 'Museo100', Arial, sans-serif;
-@font-special-bold: 'FontSiteSansBoldCondensed', Times New Roman, serif;
+@font-special: 'Spicy Rice', cursive;
+@font-special-bold: 'FontSiteSansBoldCondensed', Arial, sans-serif;
 
 // MIXINS & STANDARD CLASSES
 
@@ -217,7 +179,7 @@ body.content .teaser:hover .bar .title {
         height: 65px;
     }
      label {
-        font-family: "Museo300";
+        font-family: Arial;
         font-style: italic;
         color: #2c353e;
         font-size: 15px;
@@ -227,7 +189,7 @@ body.content .teaser:hover .bar .title {
          padding: 0 0 0 5px;
          font-weight: bold;
          font-style: italic;
-         font-family: "Museo300";
+         font-family: Arial;
      }
      .col {
         width: 310px;
@@ -253,7 +215,7 @@ body.content .teaser:hover .bar .title {
         resize: none;
      }
      input.submit {
-        font-family: "Museo500";
+        font-family: Arial;
         font-size: 18px;
         color: #2C353E;
         display: inline-block;
@@ -285,20 +247,6 @@ body.content .teaser:hover .bar .title {
 
 @media only screen and (min-width: 0px) {
 
-/* 1 ROOT           ============================================================================= */
-/* 2 HEADINGS         ============================================================================= */
-/* 3 TYPOGRAPHY       ============================================================================= */
-/* 4 LINKS           ============================================================================= */
-/* 5 FIGURES & IMAGES     ============================================================================= */
-/* 6 TABLES         ============================================================================= */
-/* 7 FORMS           ============================================================================= */
-/* 8 BANNER         ============================================================================= */
-/* 9 NAVIGATION        ============================================================================= */
-/* 10 CONTENT         ============================================================================= */
-/* 11 MAIN           ============================================================================= */
-/* 12 COMPLEMENTARY     ============================================================================= */
-/* 13 CONTENTINFO       ============================================================================= */
-/* 14 GLOBAL OBJECTS     ============================================================================= */
 
   /* UL */
 
@@ -431,7 +379,7 @@ body.content .teaser:hover .bar .title {
 
   .teaser .bar .title {
     color: #fff;
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 20px;
     line-height: 18px;
     margin: 8px 0 3px 10px;
@@ -458,7 +406,7 @@ body.content .teaser:hover .bar .title {
 
   .teaser.nobg h2 {
       font-weight: normal;
-    font-family: "Museo300";
+    font-family: Arial;
     color: #8a8f94;
     font-size: 20px;
     border-bottom: 1px dashed #8a8f94;
@@ -640,7 +588,7 @@ body.content .teaser:hover .bar .title {
     list-style-type: none;
     float: right;
     li {
-      font-family: "Museo100";
+      font-family: Arial;
       font-weight: normal;
       color: #8a8f94;
       font-size: 20px;
@@ -653,7 +601,7 @@ body.content .teaser:hover .bar .title {
         }
       }
       a {
-        font-family: "Museo500";
+        font-family: Arial;
         color: #8a8f94;
               text-transform: lowercase;
         &:hover {
@@ -896,7 +844,7 @@ height: 74px;
     height: 53px;
     line-height: 53px;
 
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 18px;
     text-align: left;
     color: #fff;
@@ -1020,17 +968,17 @@ height: 74px;
 
   .rc_box h3 {
     color: #2c353e;
-    font-family: "Museo500";
+    font-family: Arial;
     font-weight: normal;
     font-size: 20px;
     padding: 0 0 5px 0;
     border-bottom: 1px solid #cacccf;
-text-transform: lowercase;
+	text-transform: lowercase;
     margin: 0 0 15px 0;
   }
 
   .rc_box .date {
-    font-family: "Museo300";
+    font-family: Arial;
     color: #8a8f94;
     font-size: 15px;
     position: absolute;
@@ -1067,7 +1015,7 @@ text-transform: lowercase;
   }
 
   .rc_box .links a {
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 18px;
     color: #2c353e;
     display: inline-block;
@@ -1172,7 +1120,7 @@ text-transform: lowercase;
             }
         }
         a.speciallink {
-            font-family: "Museo500";
+            font-family: Arial;
             font-size: 18px;
             color: #2C353E;
             display: inline-block;
@@ -1528,87 +1476,6 @@ text-transform: lowercase;
         }
     }
 
-    #itemstofilter {
-        clear: all;
-        width: 310px;
-        margin: 0 auto;
-    }
-
-    #itemstofilter .item {
-        float: left;
-        width: 178px;
-        height: 120px;
-        margin: 0 20px 20px 0;
-        cursor: pointer;
-        .border-radius(3px);
-        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow:    0px 0px 5px rgba(0, 0, 0, 0.4);
-        box-shadow:         0px 0px 5px rgba(0, 0, 0, 0.4);
-        position: relative;
-    }
-
-    #itemstofilter .item .grey {
-        background: grey;
-        opacity: 0.5;
-        .border-radius(3px);
-        width: 178px;
-        height: 120px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-    }
-
-    #itemstofilter .item.faded .grey {
-        display: block;
-    }
-
-
-    #itemstofilter .item img {
-        .border-radius(3px);    
-    }
-
-    #itemstofilter .item .links {
-        display: none;
-        background: #2c353e;
-        position: absolute;
-        top: 0;
-        left: 0;
-        .border-radius(3px);
-        width: 178px;
-        height: 90px;
-        padding: 30px 0 0 0;
-    }
-
-    #itemstofilter .item:hover .links {
-        display: block;
-    }
-
-    #itemstofilter .item.faded:hover .links {
-        display: none;
-    }
-
-    #itemstofilter .item:hover .links a {
-        display: block;
-        height: 25px;
-        line-height: 25px;
-        width: 158px;
-        background: #fff;
-        .border-radius(3px);
-        text-align: center;
-        margin: 0 auto 10px auto;
-        color: #5b6269;
-        font-size: 15px;
-        font-weight: bold;
-        font-family: Arial;
-    }
-
-    #itemstofilter .item:hover .links a:hover {
-        background: #ff3300;
-        color: #fff;
-        text-decoration: none;
-    }
-
     a.joblink {
         background: #e0e1e2 @sprite 23px -629px;
         padding: 17px 10px 17px 49px;
@@ -1620,7 +1487,7 @@ text-transform: lowercase;
         box-shadow:         0px 0px 5px rgba(0, 0, 0, 0.4);
         font-size: 20px;
         color: #2c353e;
-        font-family: "Museo500";
+        font-family: Arial;
         line-height: 20px;
         &:hover {
             text-decoration: none;
@@ -1633,7 +1500,7 @@ text-transform: lowercase;
     -moz-box-shadow:    0px 0px 0px rgba(0, 0, 0, 0.0);
     box-shadow:         0px 0px 0px rgba(0, 0, 0, 0.0);
     margin: 0;
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 18px;
     color: #2C353E;
     display: inline-block;
@@ -1664,92 +1531,6 @@ text-transform: lowercase;
          }
     }
 
-    .memberdetails {
-    width: 100%;
-    height: 441px;
-    .border-radius(3px);
-    margin: 0 0 30px 0;
-    float: left;
-    height: auto;
-    }
-
-    .memberdetails .foto {
-    width: 628px;
-    height: 100%;
-    float: left;
-    background: orange;
-    overflow: hidden;
-    display: none;
-    }
-
-    .memberdetails .description {
-    width: 270px;
-    height: 441px;
-    float: none;
-    background: #151f29;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    .border-radius(3px);
-    }
-
-  /* Teammember Desc */
-
-  .memberdetails .description .name {
-    font-family: "Museo500";
-    font-size: 20px;
-  }
-
-  .memberdetails .foto {
-    .border-radius(3px 3px 0 0)
-  }
-
-  .memberdetails .description .position {
-    font-family: "Arial";
-    color: #c9cbcd;
-    font-size: 15px;
-    margin: 0 0 10px 0;
-  }
-
-  .memberdetails .description .quotation {
-    font-family: "Museo300";
-    font-size: 15px;
-    margin: 30px 0;
-    width: 265px;
-  }
-
-  .memberdetails a {
-    color: #fff;
-    font-size: 15px;
-    padding: 5px 8px;
-    font-family: "Arial";
-    .border-radius(3px);
-    background: black;
-    margin: 0 3px 0 0;
-  }
-
-  .memberdetails a:hover,
-  .memberdetails a.current   {
-    background: #434b53;
-    text-decoration: none;
-    .border-radius(3px);
-  }
-
-  .quotationmarks {
-    background: url(/static/img/quotationmarks.png) no-repeat left top;
-    padding: 0 9px 0 7px;
-  }
-
-  .quotationmarks.bottom {
-    background: url(/static/img/quotationmarks.png) no-repeat right bottom;
-  }
-
-  .memberdetails .description .desc {
-    font-family: "Arial";
-    color: #fff;
-    font-size: 15px;
-    width: 265px;
-  }
 
   /* CONTENTNAV ZEUGS */
 
@@ -1762,11 +1543,6 @@ ul.contentnav {
 #contentnav_content {
   clear: left;
 }
-      
-
-/* 15 VENDOR-SPECIFIC     ============================================================================= */
-/* 16 MODERNIZR       ============================================================================= */
-/* 17 TEMPLATE SPECIFICS   ============================================================================= */
 
 }
 
@@ -1774,24 +1550,10 @@ ul.contentnav {
 
 @media only screen and (min-width: 680px) {
 
-/* 1 ROOT           ============================================================================= */
-/* 2 HEADINGS         ============================================================================= */
-/* 3 TYPOGRAPHY       ============================================================================= */
-/* 4 LINKS           ============================================================================= */
-/* 5 FIGURES & IMAGES     ============================================================================= */
-/* 6 TABLES         ============================================================================= */
-/* 7 FORMS           ============================================================================= */
-/* 8 BANNER         ============================================================================= */
-/* 9 NAVIGATION        ============================================================================= */
-/* 10 CONTENT         ============================================================================= */
-/* 11 MAIN           ============================================================================= */
-/* 12 COMPLEMENTARY     ============================================================================= */
-/* 13 CONTENTINFO       ============================================================================= */
-/* 14 GLOBAL OBJECTS     ============================================================================= */
 
   h1 {
     padding: 0;
-    font-family: "Museo100";
+    font-family: 'Spicy Rice', cursive;
     font-size: 48px;
     margin: 0 0 .75em 0;
     width: auto;
@@ -1802,7 +1564,7 @@ ul.contentnav {
 
   h2 {
     color: #29323b;
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 20px;
     line-height: 24px;
     padding: 0;
@@ -1860,7 +1622,7 @@ ul.contentnav {
   }
 
   .breadcrumbs a {
-    font-family: "Museo500";
+    font-family: Arial;
   }
 
 
@@ -1920,7 +1682,7 @@ ul.contentnav {
 
   #slider .item .item_slogan {
       width: 970px;
-    font-family: "Museo100";
+    font-family: Arial;
     color: #fff;
     font-size: 48px;
     margin: 0 auto;
@@ -1930,7 +1692,7 @@ ul.contentnav {
   #slider .item .item_slogan a.slogan {
     text-align: left;
     font-size: 48px;
-    font-family: "Museo100";
+    font-family: Arial;
     line-height: 48px;
     text-shadow: rgba(0,0,0,0.8) 0px 0px 7px;
     margin: 20px 0 0 20px;
@@ -1952,7 +1714,7 @@ ul.contentnav {
   }
 
   #slider .item .item_slogan span {
-    font-family: "Museo500";
+    font-family: Arial;
     font-size: 18px;
     text-align: left;
     color: #fff;
@@ -1973,7 +1735,7 @@ ul.contentnav {
   }
 
   .slidercontrols .description {
-    font-family: "Museo300";
+    font-family: Arial;
     line-height: 50px;
     font-size: 20px;
     color: #c5c7c9;
@@ -2185,9 +1947,7 @@ ul.contentnav {
         margin: 0 0 15px 0;
     }
 
-    #itemstofilter {
-        width: 640px;
-    }
+
 
    .form {
         width: 640px;
@@ -2213,50 +1973,8 @@ ul.contentnav {
 
 
 
-  .memberdetails {
-       width: 100%;
-       height: 641px;
-       .border-radius(3px);
-       margin: 0 0 30px 0;
-       float: left;
-
-       }
-
-       .memberdetails .foto {
-       width: 635px;
-       height: 441px;
-       float: left;
-       background: orange;
-       display: block;
-       }
-
-    .memberdetails .description {
-      height: 160px;
-      float: left;
-      width: 595px;
-      .border-radius( 0 0 3px 3px );
-    }
-
-    .memberdetails .description .quotation {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      margin: 0;
-    }
-
-    .memberdetails .description .name {
-      margin: -5px 0 0 0;
-    }
-
-    .memberdetails .description .desc {
-      width: 100%;
-      margin: 20px 0 0 0;
-    }
 
 
-/* 15 VENDOR-SPECIFIC     ============================================================================= */
-/* 16 MODERNIZR       ============================================================================= */
-/* 17 TEMPLATE SPECIFICS   ============================================================================= */
 
 }
 
@@ -2264,26 +1982,12 @@ ul.contentnav {
 
 @media only screen and (min-width: 970px) {
 
-/* 1 ROOT           ============================================================================= */
-/* 2 HEADINGS         ============================================================================= */
-/* 3 TYPOGRAPHY       ============================================================================= */
-/* 4 LINKS           ============================================================================= */
-/* 5 FIGURES & IMAGES     ============================================================================= */
-/* 6 TABLES         ============================================================================= */
-/* 7 FORMS           ============================================================================= */
-/* 8 BANNER         ============================================================================= */
-/* 9 NAVIGATION        ============================================================================= */
-/* 10 CONTENT         ============================================================================= */
-/* 11 MAIN           ============================================================================= */
-/* 12 COMPLEMENTARY     ============================================================================= */
-/* 13 CONTENTINFO       ============================================================================= */
-/* 14 GLOBAL OBJECTS     ============================================================================= */
 
   /* BASIC ELEMENT ADAPTIONS */
 
   h1 {
     padding: 0;
-    font-family: "Museo100";
+    font-family: 'Spicy Rice', cursive;
     font-size: 48px;
     margin: 0 0 .5em 0;
     line-height: 43px;
@@ -2347,6 +2051,7 @@ ul.contentnav {
     left: 0px;
     top: 20px;
     width: 310px;
+    z-index: 200;
   }
 
   /* Header */
@@ -2355,6 +2060,7 @@ ul.contentnav {
     overflow: visible;
     height: 100px;
     z-index: 100;
+    position: absolute;
   }
 
   #header_shadow {
@@ -2440,45 +2146,42 @@ ul.contentnav {
     }
   }
 
-  /* Mainnav */
-
   ul#mainnav {
-      float: right;
+    float: right;
     position: static;
     left: auto;
-    right: auto;
-    top: auto;
-
+    right: 0px;
+    top: 65px;
     li {
-      font-family: "Museo100";
-      font-size: 20px;
-      margin: 0;
-      padding: 0 0 0 10px;
-      position: relative;
-      &.current {
-          a {
-            border-bottom: none;
-          }
-      }
-      &:hover {
+		font-family: Arial;
+		font-size: 20px;
+		margin: 0;
+		padding: 0 0 0 10px;
+		position: relative;
+		&.current {
+		  a {
+			border-bottom: none;
+		  }
+		}
+	&:hover {
         padding: 0 0 30px 10px;
         ul {
-          display: block;
+			display: block;
         }
-          a {
-          color: #fff;
-          span {
-            color: #8A8F94;
-color: #fff;
-          }
-          }
+		a {
+			color: #fff;
+			span {
+				color: #8A8F94;
+				color: #fff;
+			}
+		}
       }
       a {
-        font-family: "Museo500";
+        font-family: Arial;
         font-size: 20px;
         span {
           margin: 0 5px 0 0;
-          font-family: "Museo100";
+          font-family: Arial;
           display: inline-block;
         }
       }
@@ -2545,6 +2248,20 @@ ul#mainnav li:hover ul li.current a {
 
 }
 
+/* Menu Level 3 */
+
+ul#mainnav ul ul  {
+	display: none;
+	position: absolute;
+}
+
+/* Menu Level 4 */
+
+ul#mainnav ul ul ul {
+	display: none;
+	position: absolute;
+}
+
   /* Infoarea */
 
   #infoarea {
@@ -2559,14 +2276,13 @@ ul#mainnav li:hover ul li.current a {
     z-index: 20;
   }
 
-
   #slogan {
     float: left;
     width: 400px;
     height: 175px;
     font-size: 48px;
     line-height: 48px;
-    font-family: 'Museo100';
+    font-family: Arial;
     font-weight: normal;
     margin: 25px 0 0 0;
   }
@@ -2580,7 +2296,7 @@ ul#mainnav li:hover ul li.current a {
   }
 
   #ia_teaser .title {
-      font-family: "Museo500";
+      font-family: Arial;
     color: #fff;
     font-size: 20px;
     line-height: 21px;
@@ -2790,46 +2506,6 @@ ul#mainnav li:hover ul li.current a {
     height: 320px;
 }
 
-
-
-    .memberdetails {
-    width: 100%;
-    height: 441px;
-    .border-radius(3px);
-    margin: 0 0 30px 0;
-    float: left;
-    }
-
-    .memberdetails .foto {
-    width: 628px;
-    height: 100%;
-    float: left;
-    .border-radius( 3px 0 0 3px );
-    }
-
-    .memberdetails .description {
-    width: 318px;
-    height: 401px;
-    float: left;
-    width: 278px;
-    .border-radius( 0 3px 3px 0 );
-    }
-
-  .memberdetails .description .name {
-    margin: 0;
-  }
-
-  .memberdetails .description .quotation {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: 30px 0;
-  }
-
-  .memberdetails .description .desc {
-
-  }
-
   #newsitems {
     width: 970px;
     display: none;
@@ -2862,8 +2538,5 @@ ul#mainnav li:hover ul li.current a {
     float: none;
   }
 
-/* 15 VENDOR-SPECIFIC     ============================================================================= */
-/* 16 MODERNIZR       ============================================================================= */
-/* 17 TEMPLATE SPECIFICS   ============================================================================= */
 
 }

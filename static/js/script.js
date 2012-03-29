@@ -511,8 +511,10 @@ $(document).ready(function () {
             hover:function () {
                 if ($("ul", $(this)).length) {
 
-                    var mp_ul = $(this).find("ul");
+                    var mp_ul = $(this).find("ul:eq(0)");
+
                     var mp_ul_height = mp_ul.height();
+					$("#header").height(100 + mp_ul_height);
                     mp_ul.stop(true, true).fadeIn(config.menuanimationspeed);
 
                     if (header_shadow.css("display") == "none") {
@@ -528,10 +530,10 @@ $(document).ready(function () {
             }
         });
 
-
         menupoint.on({
             mouseleave:function () {
                 $("ul", $(this)).hide();
+				$("#header").height("100px");
             }
         });
 
