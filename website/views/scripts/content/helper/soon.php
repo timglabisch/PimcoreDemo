@@ -10,14 +10,11 @@
 
 $this->layout()->setLayout("default");
 
-$this->placeholder("headline")->set("Comming Soon");
+$this->placeholder("headline")->set("Coming Soon");
 
 ?>
-
-
 <div class="contentblock">
-
-    <h2>this is a "comming Soon" Page"</h2>
+    <h2>this is a "coming Soon" Page"</h2>
 
     <p>
         we plan to add much examples in this side, pleace wait a while, we'll come back in some time ;-)

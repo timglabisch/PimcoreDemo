@@ -41,5 +41,13 @@ class Website_Controller_Action extends Pimcore_Controller_Action_Frontend
 
         $this->view->language = $locale->getLanguage();
         $this->language = $locale->getLanguage();
+
+
+        if (($this->document instanceof Document_Page) and ($this->document->getProperty("codeview") == "true") ) {
+
+            $this->view->placeholder("codeview")->set(true);
+
+        }
+
     }
 }

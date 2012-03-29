@@ -38,15 +38,23 @@ if ($this->portal) {
         }
         else {
             if (count($this->placeholder("headline")->getValue()) > 0) {
-                echo "<h1>".$this->placeholder("headline")."</h1>";
+                echo "<h1>" . $this->placeholder("headline") . "</h1>";
             }
             else {
-                echo "<h1>".$this->input("Headline")."</h1>";
+                echo "<h1>" . $this->input("Headline") . "</h1>";
             }
             ?>
             <div class="leftcol">
                 <?php
                 echo $this->layout()->content;
+
+                if ($this->placeholder("codeview")) {
+                    $this->action("codeview","tools",null,
+                        array(
+
+                        )
+                    );
+                }
 
                 ?>
             </div>

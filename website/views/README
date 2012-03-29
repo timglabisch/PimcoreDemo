@@ -1,4 +1,6 @@
 Used General PlaceHolder
 
-.) headline :   Replace the H1 for Object Detail Sides, ...
+.) headline : (string)  Replace the H1 for Object Detail Sides, ...
+.) codeview : (bool)    Enable / Disable the Code Review
+
 
