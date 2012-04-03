@@ -48,12 +48,11 @@ if ($this->portal) {
                 <?php
                 echo $this->layout()->content;
 
-                if ($this->placeholder("codeview")) {
-                    $this->action("codeview","tools",null,
-                        array(
+                if ($this->document instanceof Document_Page and $this->document->getProperty("codeview")) {
 
-                        )
-                    );
+                    $this->template("tools/codeview.php", array(
+                        "codeview" => $this->document
+                    ));
                 }
 
                 ?>

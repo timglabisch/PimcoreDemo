@@ -1,16 +1,16 @@
 <?php
 /**
- * Simple Image
+ * Image
+ *
+ * @var $this Pimcore_View
+ * @url http://www.pimcore.org/wiki/display/PIMCORE/Image
  */
 
 $this->layout()->setLayout("default");
-
 ?>
-
 
 <div class="contentblock">
     <?php
-
     echo $this->image("simpleimage", array(
         "title" => "Drag your Simple image here",
         "width" => 640,
@@ -25,4 +25,3 @@ $this->layout()->setLayout("default");
 
     ?>
 </div>
-
