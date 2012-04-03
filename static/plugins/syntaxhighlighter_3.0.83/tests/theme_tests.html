@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>SyntaxHighlighter Theme Tests</title>
-    <script type="text/javascript" src="/static/js/syntaxhighlighter_3.0.83/tests/js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     </head>
 
     <body>
-    <script>
+    &lt;script>
     /**
     * Looks for a child or parent node which has specified classname.
     * Equivalent to jQuery's $(container).find(".className")
@@ -59,7 +59,7 @@
 
     return found;
     };
-    </script>
+    &lt;/script>
 
     </body>
     </html>
@@ -103,11 +103,11 @@
                 $iframe.css('background', background);
 
                 doc.write(''
-                        + '<scr' + 'ipt type="text/javascript" src="/static/js/syntaxhighlighter_3.0.83/scripts/XRegExp.js"></scr' + 'ipt>'
-                        + '<scr' + 'ipt type="text/javascript" src="/static/js/syntaxhighlighter_3.0.83/scripts/shCore.js"></scr' + 'ipt>'
-                        + '<scr' + 'ipt type="text/javascript" src="/static/js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></scr' + 'ipt>'
-                        + '<scr' + 'ipt type="text/javascript" src="/static/js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></scr' + 'ipt>'
-                        + '<link type="text/css" rel="stylesheet" href="/sh/styles/shCore' + themeName + '.css"/>'
+                        + '<scr' + 'ipt type="text/javascript" src="/sh/scripts/XRegExp.js"></scr' + 'ipt>'
+                        + '<scr' + 'ipt type="text/javascript" src="/sh/scripts/shCore.js"></scr' + 'ipt>'
+                        + '<scr' + 'ipt type="text/javascript" src="/sh/scripts/shBrushXml.js"></scr' + 'ipt>'
+                        + '<scr' + 'ipt type="text/javascript" src="/sh/scripts/shBrushJScript.js"></scr' + 'ipt>'
+                        + '<link type="text/css" rel="stylesheet" href="sh/styles/shCore' + themeName + '.css"/>'
                         + '<pre type="syntaxhighlighter" class="brush: js; html-script: true; highlight: [5, 20]" title="This is SyntaxHighlighter theme ' + themeName + ' in action!">'
                         + sample
                         + '</pre>'
