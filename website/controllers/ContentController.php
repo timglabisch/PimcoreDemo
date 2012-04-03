@@ -22,6 +22,14 @@ class ContentController extends Website_Controller_Action
 
     }
 
+    /**
+     * The Simple Way in our Live :-)
+     */
+    public function starterAction()
+    {
+
+    }
+
     public function soonAction()
     {
         $this->renderScript("content/helper/soon.php");
