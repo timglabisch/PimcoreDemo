@@ -3,7 +3,7 @@
  * Wysiwyg
  *
  * @var $this Pimcore_View
- * @url http://www.pimcore.org/wiki/display/PIMCORE/Area+%28since+1.4.3%29
+ * @url http://www.pimcore.org/wiki/display/PIMCORE/WYSIWYG
  */
 
 $this->layout()->setLayout("default");
