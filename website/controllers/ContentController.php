@@ -30,6 +30,14 @@ class ContentController extends Website_Controller_Action
 
     }
 
+    /**
+     * Show me all Childs from my Document
+     */
+    public function documentlistAction()
+    {
+
+    }
+
     public function soonAction()
     {
         $this->renderScript("content/helper/soon.php");
