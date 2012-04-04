@@ -2,21 +2,21 @@
 <zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
   <general>
     <timezone>Europe/Berlin</timezone>
-    <php_cli></php_cli>
-    <domain></domain>
+    <php_cli>/usr/local/zend/bin/php</php_cli>
+    <domain>dev4.pimcore.org</domain>
     <language>de</language>
     <validLanguages>en_GB,de_AT</validLanguages>
     <theme>/pimcore/static/js/lib/ext/resources/css/xtheme-gray.css</theme>
     <loginscreenimageservice>1</loginscreenimageservice>
     <loginscreencustomimage></loginscreencustomimage>
     <debug>1</debug>
-    <debug_ip>62.99.163.106</debug_ip>
+    <debug_ip></debug_ip>
     <firephp></firephp>
     <loglevel>
       <debug></debug>
-      <info>1</info>
-      <notice>1</notice>
-      <warning>1</warning>
+      <info></info>
+      <notice></notice>
+      <warning></warning>
       <error></error>
       <critical>1</critical>
       <alert>1</alert>
@@ -39,20 +39,21 @@
   <documents>
     <versions>
       <days></days>
-      <steps>20</steps>
+      <steps>0</steps>
     </versions>
     <default_controller>default</default_controller>
     <default_action>default</default_action>
     <error_pages>
-      <default>/de</default>
+      <default>/</default>
     </error_pages>
+    <createredirectwhenmoved></createredirectwhenmoved>
     <allowtrailingslash></allowtrailingslash>
     <allowcapitals></allowcapitals>
   </documents>
   <objects>
     <versions>
       <days></days>
-      <steps>20</steps>
+      <steps>0</steps>
     </versions>
   </objects>
   <assets>
@@ -61,17 +62,17 @@
     </webdav>
     <versions>
       <days></days>
-      <steps>20</steps>
+      <steps>0</steps>
     </versions>
     <ffmpeg></ffmpeg>
     <qtfaststart></qtfaststart>
   </assets>
   <services>
     <googlemaps>
-      <apikey></apikey>
+      <apikey>AIzaSyBbtPCzVQLBZk2Hsi3ysP6Egs6D-b93H0A</apikey>
     </googlemaps>
     <translate>
-      <apikey></apikey>
+      <apikey>AIzaSyBbtPCzVQLBZk2Hsi3ysP6Egs6D-b93H0A</apikey>
     </translate>
     <google>
       <username></username>
@@ -85,12 +86,12 @@
     <excludeCookie>pimcore_admin_sid</excludeCookie>
   </cache>
   <outputfilters>
-    <imagedatauri></imagedatauri>
-    <less></less>
+    <imagedatauri>1</imagedatauri>
+    <less>1</less>
     <lesscpath></lesscpath>
-    <cssminify></cssminify>
-    <javascriptminify></javascriptminify>
-    <javascriptminifyalgorithm></javascriptminifyalgorithm>
+    <cssminify>1</cssminify>
+    <javascriptminify>1</javascriptminify>
+    <javascriptminifyalgorithm>jsmin</javascriptminifyalgorithm>
   </outputfilters>
   <email>
     <sender>
