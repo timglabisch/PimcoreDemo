@@ -4,6 +4,7 @@
  * Our cool Navigation
  *
  * @var $this Pimcore_View
+ * @var $NaviDocument Document_Page|Document_Link|Document_Hardlink
  */
 
 
@@ -20,7 +21,9 @@ if (count($this->startNode->getChilds()) > 0) {
                 }
 
             }
-            else $name = $NaviDocument->getName();
+            else {
+                $name = $NaviDocument->getName();
+            }
 
             if ($NaviDocument->isPublished() && strlen($name) > 1) {
                 $startmenu = true;
@@ -58,10 +61,23 @@ if (count($this->startNode->getChilds()) > 0) {
             }
 
 
-            if ($NaviDocument->isPublished() && strlen($name) > 1) {
+            if ($NaviDocument->isPublished() and (strlen($name) > 1)) {
+
                 $active = false;
                 $target = false;
                 $class = "";
+
+                if (($NaviDocument instanceof Document_Page) and ($NaviDocument->getAction() == "soon")) {
+                    if (PIMCORE_DEBUG) {
+                        $class .= " soon";
+                    }
+                    else {
+                        $class .= " hidden";
+                    }
+                }
+                else {
+                    $class .= " other";
+                }
 
                 $i++;
 
@@ -91,17 +107,7 @@ if (count($this->startNode->getChilds()) > 0) {
                 ?>
             <li class="<?=$class;?>">
                 <?php
-                $class = "";
 
-                if ($this->isRoot) {
-                    $class .= " main";
-                }
-                if ($i == 1) {
-                    $class .= " first";
-                }
-                if ($active) {
-                    $class .= " active";
-                }
                 ?>
 
 
@@ -121,7 +127,7 @@ if (count($this->startNode->getChilds()) > 0) {
 
                     if ($this->onlyactive) {
                         if ($active) {
-                             $this->action("menu", "navigation", null,
+                            $this->action("menu", "navigation", null,
                                 array(
                                     "startNode" => $NaviDocument,
                                     "document" => $this->document,
@@ -131,7 +137,7 @@ if (count($this->startNode->getChilds()) > 0) {
                     }
                     else {
 
-                         echo $this->action("menu", "navigation", null,
+                        echo $this->action("menu", "navigation", null,
                             array(
                                 "startNode" => $NaviDocument,
                                 "document" => $this->document,
