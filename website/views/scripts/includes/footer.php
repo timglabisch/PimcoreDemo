@@ -1,7 +1,7 @@
 <div id="footer">
     <div class="limiter">
         <div class="footerlinks">
-            <span>&copy; <?=date("Y");?> Department DEV 4 - Special Reason Center</span>
+            <span>&copy; 2011 - <?=date("Y");?> DEV 4 - Special Resolution Center</span>
            <!--
             <a href="#"><span>/</span>Kontakt</a>
             <a href="#"><span>/</span>AGB</a>
