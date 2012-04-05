@@ -117,6 +117,7 @@
     height: 20px;
     background: #a3bae9;
     border:2px dashed #fff;
+    clear:both;
 }
 
 .pimcore_area_dropzone_hover {
@@ -303,6 +304,10 @@
     height:25px;
     right:5px;
     top:5px;
+}
+
+.pimcore_areablock_toolbar .x-btn-mc {
+    text-align: left;
 }
 
 /*
