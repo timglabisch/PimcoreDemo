@@ -21,8 +21,9 @@ $this->layout()->setLayout("default");
      * Advanced Use
      */
 
-    $demotoolbar = <<<EOD
-var DemoToolbar = [
+    if ($this->editmode) {
+        $demotoolbar = <<<EOD
+ar DemoToolbar = [
     ['Cut', 'Copy', 'Paste', 'PasteText',  '-',],
     ['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'],
     '/',
@@ -33,6 +34,7 @@ var DemoToolbar = [
     ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak'],
 ];
 EOD;
+    }
 
     $this->headScript()->appendScript($demotoolbar);
 

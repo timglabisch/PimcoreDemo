@@ -105,12 +105,15 @@ if ($this->document instanceof Document_Page and $this->document->getProperty("c
             'type' => 'text/css'
         ));
 
-    $this->headScript()->appendFile(
-        $pluginpath . '/scripts/shCore.js',
+    /**
+     * @note revert Order ! --> prepend
+     */
+    $this->headScript()->prependFile(
+        $pluginpath . '/scripts/shBrushPhp.js',
         'text/javascript'
     );
-    $this->headScript()->appendFile(
-        $pluginpath . '/scripts/shBrushPhp.js',
+    $this->headScript()->prependFile(
+        $pluginpath . '/scripts/shCore.js',
         'text/javascript'
     );
     $this->headScript()->appendScript(
