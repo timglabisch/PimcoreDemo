@@ -57,7 +57,6 @@ pimcore.object.folder = Class.create(pimcore.object.abstract, {
 
             this.init();
             this.addTab();
-            
             this.startChangeDetector();
         }
         catch (e) {
@@ -169,10 +168,18 @@ pimcore.object.folder = Class.create(pimcore.object.abstract, {
             buttons.push("-");
             buttons.push(this.toolbarButtons.reload);
 
+            buttons.push({
+                text: t('show_in_tree'),
+                iconCls: "pimcore_icon_download_showintree",
+                scale: "medium",
+                handler: this.selectInTree.bind(this, "folder")
+            });
+
             buttons.push("-");
             buttons.push({
+                xtype: 'tbtext',
                 text: this.data.general.o_id,
-                xtype: 'tbtext'
+                scale: "medium"
             });
 
             this.toolbar = new Ext.Toolbar({

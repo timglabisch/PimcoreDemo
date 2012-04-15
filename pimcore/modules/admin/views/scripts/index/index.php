@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="noindex, nofollow" />
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <title><?php echo htmlentities($_SERVER["HTTP_HOST"], ENT_QUOTES, 'UTF-8') ?> :: pimcore</title>
@@ -47,7 +47,6 @@
             $themeUrl,
             "/pimcore/static/js/lib/ext-plugins/SwfUploadPanel/SwfUploadPanel.css",
             "/pimcore/static/js/lib/ext-plugins/Notification/notification.css",
-            "/pimcore/static/js/lib/ext-plugins/SuperField/ux-superfield.css",
             "/pimcore/static/js/lib/ext-plugins/SuperBoxSelect/superboxselect.css",
             "/pimcore/static/js/lib/ext-plugins/ux/css/RowEditor.css",
             "/pimcore/static/js/lib/ext-plugins/ux/css/Spinner.css",
@@ -102,7 +101,6 @@
             "lib/ext-plugins/Notification/Ext.ux.Notification.js",
             "lib/ext-plugins/PagingTreeLoader/PagingTreeLoader.js",
             "lib/ext-plugins/GridRowOrder/roworder.js",
-            "lib/ext-plugins/SuperField/SuperField.js",
             "lib/ext-plugins/PimcoreFormLayout/panel.js",
             "lib/ext-plugins/ux/Reorderer.js",
             "lib/ext-plugins/ux/ColumnHeaderGroup.js",
@@ -225,10 +223,6 @@
             "pimcore/object/helpers/gridTabAbstract.js",
             "pimcore/element/selector/object.js",
 
-            //element importer, exporter
-            "pimcore/element/importer.js",
-            "pimcore/element/exporter.js",
-        
             // documents
             "pimcore/document/properties.js",
             "pimcore/document/document.js",

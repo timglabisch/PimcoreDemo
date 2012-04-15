@@ -55,13 +55,6 @@ pimcore.object.object = Class.create(pimcore.object.abstract, {
 
             this.addTab();
 
-            try {
-                Ext.getCmp("pimcore_panel_tree_objects").expand();
-                var tree = pimcore.globalmanager.get("layout_object_tree");
-                tree.tree.selectPath(this.data.idPath);
-            } catch (e) {
-            }
-            
             this.startChangeDetector();
             this.setupInheritanceDetector();
         }
@@ -309,20 +302,30 @@ pimcore.object.object = Class.create(pimcore.object.abstract, {
                 buttons.push(this.toolbarButtons.remove);
             }
 
+            buttons.push("-");
+
             buttons.push(this.toolbarButtons.reload);
+
+            buttons.push({
+                text: t('show_in_tree'),
+                iconCls: "pimcore_icon_download_showintree",
+                scale: "medium",
+                handler: this.selectInTree.bind(this, this.data.general.o_type)
+            });
+
 
             buttons.push("-");
             buttons.push({
+                xtype: 'tbtext',
                 text: this.data.general.o_id,
-                xtype: 'tbtext'
+                scale: "medium"
             });
 
 
             // version notification
-            buttons.push("-");
             this.newerVersionNotification = new Ext.Toolbar.TextItem({
                 xtype: 'tbtext',
-                text: '<img src="/pimcore/static/img/icon/error.png" align="absbottom" />&nbsp;&nbsp;' + t("this_is_a_newer_not_published_version"),
+                text: '&nbsp;&nbsp;<img src="/pimcore/static/img/icon/error.png" align="absbottom" />&nbsp;&nbsp;' + t("this_is_a_newer_not_published_version"),
                 scale: "medium",
                 hidden: true
             });
