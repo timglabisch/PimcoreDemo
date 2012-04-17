@@ -20,8 +20,8 @@ CREATE TABLE `assets` (
 
 DROP TABLE IF EXISTS `cache_tags`;
 CREATE TABLE `cache_tags` (
-  `id` varchar(100) NOT NULL DEFAULT '',
-  `tag` varchar(100) NULL DEFAULT NULL,
+  `id` varchar(255) NOT NULL DEFAULT '',
+  `tag` varchar(255) NULL DEFAULT NULL,
   PRIMARY KEY (`id`,`tag`),
   INDEX `id` (`id`),
   INDEX `tag` (`tag`)
@@ -379,16 +379,6 @@ CREATE TABLE `staticroutes` (
   KEY `name` (`name`)
 ) DEFAULT CHARSET=utf8;
 
-CREATE TABLE `tree_locks` (
-  `id` int(11) NOT NULL DEFAULT '0',
-  `type` enum('asset','document','object') NOT NULL DEFAULT 'asset',
-  `locked` enum('self','propagate') default NULL,
-  PRIMARY KEY (`id`,`type`),
-  KEY `id` (`id`),
-  KEY `type` (`type`),
-  KEY `locked` (`locked`)
-) DEFAULT CHARSET=utf8;
-
 DROP TABLE IF EXISTS `translations_admin`;
 CREATE TABLE `translations_admin` (
   `key` varchar(255) NOT NULL DEFAULT '',
@@ -409,6 +399,16 @@ CREATE TABLE `translations_website` (
   PRIMARY KEY (`key`,`language`),
   KEY `language` (`language`),
   KEY `key` (`key`)
+) DEFAULT CHARSET=utf8;
+
+CREATE TABLE `tree_locks` (
+  `id` int(11) NOT NULL DEFAULT '0',
+  `type` enum('asset','document','object') NOT NULL DEFAULT 'asset',
+  `locked` enum('self','propagate') default NULL,
+  PRIMARY KEY (`id`,`type`),
+  KEY `id` (`id`),
+  KEY `type` (`type`),
+  KEY `locked` (`locked`)
 ) DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `users`;
