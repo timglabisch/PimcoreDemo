@@ -11,8 +11,6 @@
 $this->layout()->setLayout("layout");
 ?>
 
-<!-- CONTENT FIRST ;) -->
-
 <div class="breadcrumbs">
     <a href="#">zur&uuml;ck zur &uuml;bersicht</a>
 </div>

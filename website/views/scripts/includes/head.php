@@ -64,7 +64,6 @@ if (!$this->editmode and $this->document instanceof Document) {
  * Load My CSS Files
  */
 
-//die (get_class($this));
 $this->headLink()->appendStylesheet(
     array(
         'href' => '/static/css/styles.less',
@@ -146,11 +145,7 @@ $this->headLink()->appendStylesheet(
 $this->headLink()->appendStylesheet('/static/css/ie.css', 'screen', 'lt IE 9');
 
 
-echo $this->headStyle();
-echo $this->headLink();
-
-
-if (!Pimcore_Google_Analytics::isConfigured()) {
+if (!Pimcore_Google_Analytics::isConfigured() and !Pimcore_Google_Analytics::getCode()) {
     ?>
 <script type="text/javascript" language="JavaScript">
     /*<![CDATA[*/
@@ -160,16 +155,6 @@ if (!Pimcore_Google_Analytics::isConfigured()) {
 <?php
 }
 
-// @todo use head Helper
-
-echo <<<EOD
-<!--[if IE 6]>
-<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js" type="text/javascript" language="JavaScript"></script>
-<script type="text/javascript" language="JavaScript">
-    window.attachEvent("onload", function () {
-        CFInstall.check({mode:"overlay"})
-    });
-</script>
-<![endif]-->
-</head>
-EOD;
+echo $this->headStyle();
+echo $this->headLink();
+echo "</head>";

@@ -1,7 +1,7 @@
 <?php
-
 /**
- * My Great JavaScript
+ * My JavaScript
+ * @var $this Pimcore_View
  */
 
 
@@ -22,48 +22,7 @@ if ($this->placeholder("lightbox")->getValue() === true) {
         'text/javascript'
     );
 }
-/*
 
-if ($this->placeholder("easing")->getValue() === true) {
-    $this->headScript()->appendFile(
-        '/static/js/jquery.easing.js',
-        'text/javascript'
-    );
-}
-
-if ($this->placeholder("isotope")->getValue() === true) {
-    $this->headScript()->appendFile(
-        '/static/js/jquery.isotope.min.js',
-        'text/javascript'
-    );
-}
-
-if ($this->placeholder("datepicker")->getValue() === true) {
-    $this->headScript()->appendFile(
-        '/static/js/datepicker.js',
-        'text/javascript'
-    );
-}
-
-if ($this->placeholder("timeout")->getValue() === true) {
-    $this->headScript()->appendFile(
-        '/static/js/jquery.dotimeout.js',
-        'text/javascript'
-    );
-}
-
-if ($this->placeholder("elslider")->getValue() === true) {
-    $this->headScript()->appendFile(
-        '/static/js/jquery.elslider.js',
-        'text/javascript'
-    );
-}
-*/
-
-/*$this->headScript()->appendFile(
-        '/static/js/css3-mediaqueries.js',
-        'text/javascript'
-    );*/
 
 if (!$this->editmode) {
     $this->headScript()->appendFile(
@@ -72,7 +31,14 @@ if (!$this->editmode) {
     );
 }
 
+$ie6 = <<<EOD
+window.attachEvent("onload", function () {
+    CFInstall.check({mode:"overlay"})
+});
+EOD;
+
+$this->headScript()->appendFile("//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js",null, array('conditional' => 'IE 6'));
+$this->headScript()->appendScript($ie6,null, array('conditional' => 'IE 6'));
+
 echo $this->headScript();
 
-
-?>

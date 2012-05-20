@@ -22,8 +22,6 @@ if ($this->portal) {
 ?>
 
 <body class="clearfix <?=$class;?>">
-
-?>
 <div id="content">
     <div class="limiter">
 

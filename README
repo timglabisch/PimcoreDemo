@@ -30,3 +30,10 @@ http://www.pimcore.org/issues/
 
 Community:
 http://www.pimcore.org/board/viewforum.php?f=28
+
+Install:
+1. Copy the files (checkout) in the root Directory of your webServer
+2. make your MySql Database and extract DOCUMENT_ROOT/data/pimcore.sql (like mysql -uusername -ppassword -DDatabase < data/pimcore.sql)
+3. modify DOCUMENT_ROOT/website/var/config/system.xml
+4. Have Fun :-)
+

@@ -8,12 +8,9 @@
  * User: Nflamann
  */
 
-
 $this->layout()->setLayout("default");
 
 ?>
-
-
 
 <h1>Examples</h1>
 

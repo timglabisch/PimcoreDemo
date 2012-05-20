@@ -21,17 +21,16 @@ $this->template("content/starter/block.php");
 
             switch (get_class($element)) {
                 case "Document_Page":
-                default:
                     ?>
                         <li><a href="<?=$element->getFullPath();?>"><?=$element->getName();?></a></li>
                         <?php
                     break;
+                default:
+                    break;
             }
-
         }
         ?>
     </ul>
-
 </div>
 
 
