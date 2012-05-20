@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <title><?php echo htmlentities($_SERVER["HTTP_HOST"], ENT_QUOTES, 'UTF-8') ?> :: pimcore</title>
+    <title><?php echo htmlentities($this->getRequest()->getHttpHost(), ENT_QUOTES, 'UTF-8') ?> :: pimcore</title>
 
     <!-- load in head because of the progress bar at loading -->
     <link rel="stylesheet" type="text/css" href="/pimcore/static/css/admin.css?_dc=<?php echo Pimcore_Version::$revision ?>" />
@@ -139,9 +139,18 @@
 
             // locale
             "lib/ext/locale/ext-lang-" . $this->language . ".js",
-
-            "lib/codemirror/js/codemirror.js"
         );
+
+        // browser specific lib includes
+        $browser = new Pimcore_Browser();
+        $browserVersion = (int) $browser->getVersion();
+        $platform = $browser->getPlatform();
+
+
+        // ace editor (code editor in server file explorer) is only for => IE9, FF, Chrome
+        if ( ($browser->getBrowser() == Pimcore_Browser::BROWSER_IE && $browserVersion >= 9) || $browser->getBrowser() != Pimcore_Browser::BROWSER_IE) {
+            $scriptLibs[] = "lib/ace/ace-noconflict.js";
+        }
 
 
         // PIMCORE SCRIPTS
@@ -228,7 +237,6 @@
             "pimcore/document/document.js",
             "pimcore/document/page_snippet.js",
             "pimcore/document/edit.js",
-            "pimcore/document/editemail.js",
             "pimcore/document/versions.js",
             "pimcore/document/pages/settings.js",
             "pimcore/document/pages/preview.js",

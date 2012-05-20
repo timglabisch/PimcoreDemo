@@ -848,9 +848,68 @@ pimcore.helpers.openMemorizedTabs = function () {
     }
 }
 
+pimcore.helpers.assetSingleUploadDialog = function (parent, parentType, success, failure) {
+
+    if(typeof success != "function") {
+        var success = function () {};
+    }
+
+    if(typeof failure != "function") {
+        var failure = function () {};
+    }
+
+    var url = '/admin/asset/add-asset-compatibility/?parent' + ucfirst(parentType) + '=' + parent;
+
+    var uploadWindowCompatible = new Ext.Window({
+        autoHeight: true,
+        title: t('add_assets'),
+        closeAction: 'close',
+        width:400,
+        modal: true
+    });
+
+    var uploadForm = new Ext.form.FormPanel({
+        layout: "pimcoreform",
+        fileUpload: true,
+        width: 400,
+        bodyStyle: 'padding: 10px;',
+        items: [{
+            xtype: 'fileuploadfield',
+            emptyText: t("select_a_file"),
+            fieldLabel: t("asset"),
+            width: 230,
+            name: 'Filedata',
+            buttonText: "",
+            buttonCfg: {
+                iconCls: 'pimcore_icon_upload_single'
+            },
+            listeners: {
+                fileselected: function () {
+                    uploadForm.getForm().submit({
+                        url: url,
+                        waitMsg: t("please_wait"),
+                        success: function (el, res) {
+                            success(res);
+                            uploadWindowCompatible.close();
+                        },
+                        failure: function (el, res) {
+                            failure(res);
+                            uploadWindowCompatible.close();
+                        }
+                    });
+                }
+            }
+        }]
+    });
+
+    uploadWindowCompatible.add(uploadForm);
+    uploadWindowCompatible.show();
+    uploadWindowCompatible.setWidth(401);
+    uploadWindowCompatible.doLayout();
+};
+
 
 pimcore.helpers.selectPathInTreeActiveSelections = {};
-
 pimcore.helpers.selectPathInTree = function (tree, path, callback) {
     try {
 
@@ -871,24 +930,14 @@ pimcore.helpers.selectPathInTree = function (tree, path, callback) {
 
         tree.selectPath(path, null, function (success, node) {
             if(!success) {
-                /*Ext.Ajax.request({
-                    url: "/admin/object/get-id-path-paging-info",
-                    params: {
-                        path: path
-                    },
-                    success: function (transport) {
-                        var data = Ext.decode(transport.responseText);
-
-                    }
-                });*/
-                delete pimcore.helpers.selectPathInTreeActiveSelections[hash];
-
+                Ext.MessageBox.alert(t("error"), t("not_possible_with_paging"));
             } else {
                 if(typeof initialData["callback"] == "function") {
                     initialData["callback"]();
                 }
-                delete pimcore.helpers.selectPathInTreeActiveSelections[hash];
             }
+
+            delete pimcore.helpers.selectPathInTreeActiveSelections[hash];
         });
 
     } catch (e) {

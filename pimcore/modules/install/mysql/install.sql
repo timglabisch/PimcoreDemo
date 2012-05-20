@@ -202,8 +202,10 @@ CREATE TABLE `glossary` (
   `link` varchar(255) DEFAULT NULL,
   `abbr` varchar(255) DEFAULT NULL,
   `acronym` varchar(255) DEFAULT NULL,
+  `site` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `language` (`language`)
+  KEY `language` (`language`),
+  KEY `site` (`site`)
 ) DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `http_error_log`;
@@ -401,6 +403,7 @@ CREATE TABLE `translations_website` (
   KEY `key` (`key`)
 ) DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `tree_locks`;
 CREATE TABLE `tree_locks` (
   `id` int(11) NOT NULL DEFAULT '0',
   `type` enum('asset','document','object') NOT NULL DEFAULT 'asset',
